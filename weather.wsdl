@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<wsdl:definitions
-          xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+<wsdl:definitions 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 					xmlns:tns="http://www.example.org/weather/"
 					xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 					xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -53,7 +52,7 @@
   </wsdl:message>
 
   <wsdl:portType name="WeatherPortType">
-    <!-- Update -->
+    <!-- Subscribe -->
     <wsdl:operation name="subscribeWeather">
       <wsdl:input message="tns:locationMessage"/>
     </wsdl:operation>
@@ -62,7 +61,7 @@
       <wsdl:input message="tns:locationMessage"/>
       <wsdl:output message="tns:weatherMessage"/>
     </wsdl:operation>
-    <!-- Sensing -->
+    <!-- Update -->
     <wsdl:operation name="updateWeather">
   	  <wsdl:output message="tns:locationMessage"/>
       <wsdl:input message="tns:weatherMessage"/>
